@@ -1,10 +1,11 @@
 let listaAmigosAgregados = [];
-//Establecer variable que almacena en lista los nombres de las personas que particpan en el concurs
+//Establecer variable que almacena en lista los nombres de las personas que particpan en el concurso
+
 
 //Desarrolla una función, que permita al usuario ingresar un nombre en el campo de texto y añadirlo a la lista de amigos creada anteriormente.
  function agregarAmigo () {
  let nombreDeAmigoSecreto = document.getElementById("amigo").value.trim();
- console.log(nombreDeAmigoSecreto);
+ console.log(listaAmigosAgregados);
 
     if (nombreDeAmigoSecreto === "") {
         alert ("Por favor, inserte un nombre");
@@ -42,3 +43,27 @@ function actualizarListaDeAmigos () {
     let valorCaja = document.querySelector("#amigo");
     valorCaja.value = "";
  }
+
+   
+
+function sortearAmigo () {   //verificar que el array no esta vacio.  
+    if (listaAmigosAgregados.length === 0){
+        alert ("no hay amigos en la lista para sortear");
+        return;
+      }
+        //generar un indice aleatorio
+
+        let indiceAleatorio = Math.floor(Math.random()*listaAmigosAgregados.length);
+        console.log(indiceAleatorio);
+        let amigoSorteado = listaAmigosAgregados[indiceAleatorio];
+        //Mostrar resultado en la página
+        document.getElementById("resultado").innerHTML = `el amigo sorteado es ${amigoSorteado}`;
+
+
+
+
+}
+
+
+
+
