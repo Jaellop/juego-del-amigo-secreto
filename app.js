@@ -57,7 +57,7 @@ function sortearAmigo () {   //verificar que el array no esta vacio.
         console.log(indiceAleatorio);
         let amigoSorteado = listaAmigosAgregados[indiceAleatorio];
         //Mostrar resultado en la página
-        document.getElementById("resultado").innerHTML = `el amigo sorteado es ${amigoSorteado}`;
+        document.getElementById("resultado").innerHTML = `El amigo sorteado es ${amigoSorteado}`;
 
 
 
